@@ -13,10 +13,17 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    fetchMe()
+  },[endPoint])
+
+
+  const fetchMe = () => {
   fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=+${endPoint}`, options)
     .then(response => { return response.json()})
     .then(data => setContainer(data))
     .catch(err => console.error(err));
+  }
 
     const submitHandler = (e) => {
       e.preventDefault();
