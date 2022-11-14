@@ -21,7 +21,7 @@ function App() {
   const fetchMe = () => {
   fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=+${endPoint}`, options)
     .then(response => { return response.json()})
-    .then(data => setContainer(data))
+    .then(data => setContainer(data.d))
     .catch(err => console.error(err));
   }
 
@@ -36,6 +36,12 @@ function App() {
         <input type="" value={endPoint} onChange={(e) => setEndPoint(e.target.value)}/>
         <button type='submit'>submit</button>
       </form>
+
+      {container.map((item) => {
+        return (
+          <p>{item.l}</p>
+        )
+      })}
     </div>
   );
 }
