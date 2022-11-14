@@ -11,12 +11,15 @@ function App() {
   };
 
   fetch('https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
+    .then(response => console.log(response.json()))
     .catch(err => console.error(err));
 
   return (
     <div className="App">
+      <form>
+        <input type="" />
+        <button type='submit'>submit</button>
+      </form>
     </div>
   );
 }
