@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
     }
   };
 
-  fetch('https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr', options)
-    .then(response => console.log(response.json()))
+  fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=+${endPoint}`, options)
+    .then(response => { return response.json()})
     .then(data => setContainer(data))
     .catch(err => console.error(err));
 
