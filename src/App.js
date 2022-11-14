@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <form>
-        <input type="" />
+        <input type="" value={endPoint} onChange={(e) => setEndPoint(e.target.value)}/>
         <button type='submit'>submit</button>
       </form>
     </div>
