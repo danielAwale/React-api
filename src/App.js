@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [endPoint, setEndPoint] = useState('')
+  const [container, setContainer] = useState([])
 
   const options = {
     method: 'GET',
@@ -14,6 +15,7 @@ function App() {
 
   fetch('https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr', options)
     .then(response => console.log(response.json()))
+    .then(data => setContainer(data))
     .catch(err => console.error(err));
 
   return (
