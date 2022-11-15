@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [endPoint, setEndPoint] = useState('')
   const [container, setContainer] = useState([])
+  const [finalPoint, setFinalPoint] = useState('')
 
   useEffect(() => {
     const options = {
@@ -21,7 +22,8 @@ function App() {
 
 
     const submitHandler = (e) => {
-      e.preventDefault();
+      e.preventDefault()
+      setFinalPoint(endPoint)
     }
 
     const changeEndpoing = (e) => {
