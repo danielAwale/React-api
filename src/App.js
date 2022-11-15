@@ -36,15 +36,16 @@ function App() {
         <input type="text" value={endPoint} onChange={changeEndpoing}/>
         <button type='submit'>submit</button>
       </form>
-
+    <div className="element">
       {container.map((item,index) => {
         return (
-          <div key={index}>
+          <div key={index} className='element div'>
             <img src={item.i.imageUrl} alt="" />
             <p>{item.l}</p>
           </div>
         )
       })}
+    </div>
     </div>
   );
 }
