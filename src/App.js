@@ -37,9 +37,9 @@ function App() {
         <button type='submit'>submit</button>
       </form>
 
-      {container.map((item) => {
+      {container.map((item,index) => {
         return (
-          <div>
+          <div key={index}>
             <img src={item.i.imageUrl} alt="" />
             <p>{item.l}</p>
           </div>
