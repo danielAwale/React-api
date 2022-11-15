@@ -1,4 +1,4 @@
-Working With React and RapidApi
+# Working With React and RapidApi
 
 - A small project that uses Rapid Api and react to make a search for movies.
 
