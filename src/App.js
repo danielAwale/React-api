@@ -18,7 +18,7 @@ function App() {
       .then(response => { return response.json()})
       .then(data => setContainer(data.d))
       .catch(err => console.error(err));
-  },[endPoint])
+  },[finalPoint])
 
 
     const submitHandler = (e) => {
